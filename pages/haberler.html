@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hacker News, Dev.to ve secili RSS kaynaklarindan teknoloji haberleri.">
+    <title>Haberler | TeknoRadar</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="TeknoRadar ana sayfa">
+        <img src="../images/logo.png" alt="TeknoRadar" class="brand-logo">
+        <span>TeknoRadar</span>
+      </a>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Menüyü aç veya kapat"><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav>
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="haberler.html" aria-current="page">Haberler</a>
+        <a href="araclar.html">Araçlar</a>
+        <a href="repos.html">Repos</a>
+        <a href="guvenlik.html">Güvenlik</a>
+        <a href="rehberler.html">Rehberler</a>
+        <a href="hakkinda.html">Hakkında</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Haberler</p>
+        <h1>HN, Dev.to ve RSS tabanli teknoloji akışı.</h1>
+        <p>Haberleri kaynak, konu ve onem sinyaline göre tarayin. Veriler public kaynaklardan cekilir; erisim olmadiginda yerel secili akis gosterilir.</p>
+      </section>
+
+      <section class="toolbar" aria-label="Haber filtreleri">
+        <button class="filter-button active" type="button" data-news-filter="all">Tüm akış</button>
+        <button class="filter-button" type="button" data-news-filter="hn">Hacker News</button>
+        <button class="filter-button" type="button" data-news-filter="devto">Dev.to</button>
+        <button class="filter-button" type="button" data-news-filter="rss">RSS secmeleri</button>
+      </section>
+
+      <section class="section">
+        <div class="news-layout">
+          <div class="feed-list" data-news-feed>
+            <p class="loading">Haber akışı yukleniyor...</p>
+          </div>
+          <aside class="source-panel">
+            <h2>Kaynak politikasi</h2>
+            <p>TeknoRadar, haberleri yorum yerine kaynak linki ve kısa sinyal notuyla sunar. Amac hizli tarama, tarafsiz yonlendirme ve kaynak seffafligidir.</p>
+            <div class="source-list">
+              <a href="https://github.com/HackerNews/API" target="_blank" rel="noreferrer">Hacker News API</a>
+              <a href="https://developers.forem.com/api" target="_blank" rel="noreferrer">Forem / Dev.to API</a>
+              <a href="https://www.theverge.com/rss/index.xml" target="_blank" rel="noreferrer">The Verge RSS</a>
+              <a href="https://feeds.arstechnica.com/arstechnica/index" target="_blank" rel="noreferrer">Ars Technica RSS</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pro-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <a class="brand" href="../index.html">
+        <img src="../images/logo.png" alt="TeknoRadar" class="brand-logo">
+        <span>TeknoRadar</span>
+      </a>
+      <p>Teknoloji dünyasının yeni nesil radarı. Güncel haberler, açık kaynak projeler ve güvenlik uyarıları tek bir platformda.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="haberler.html">Haberler</a></li>
+        <li><a href="araclar.html">Araçlar</a></li>
+        <li><a href="repos.html">GitHub Repos</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kaynaklar</h4>
+      <ul>
+        <li><a href="guvenlik.html">Güvenlik Uyarıları</a></li>
+        <li><a href="rehberler.html">Rehberler</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kurumsal</h4>
+      <ul>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="#">Gizlilik Politikası</a></li>
+        <li><a href="#">Kullanım Şartları</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 TeknoRadar. Tüm hakları saklıdır.
+  </div>
+</footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

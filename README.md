@@ -1,23 +1,23 @@
 # TeknoRadar
 
-TeknoRadar; teknoloji haberleri, acik kaynak projeler, gelistirici araclari ve guvenlik uyarilarini tek merkezde toplayan ucretsiz, statik ve GitHub Pages uyumlu bir teknoloji radaridir.
+TeknoRadar; teknoloji haberleri, açık kaynak projeler, geliştirici araçları ve güvenlik uyarılarını tek merkezde toplayan ücretsiz, statik ve GitHub Pages uyumlu bir teknoloji radarıdır.
 
-## Ozellikler
+## Özellikler
 
-- Ana sayfada bugunun one cikan teknoloji sinyalleri
-- Hacker News ve Dev.to tabanli haber akisi
-- RSS kaynaklari icin secili fallback haberleri
-- Gelistiriciler icin ucretsiz arac katalogu
-- Secilmis acik kaynak repo vitrini
-- CISA KEV tabanli guvenlik uyarilari
-- Kisa ve kalici teknoloji rehberleri
+- Ana sayfada bugünün öne çıkan teknoloji sinyalleri
+- Hacker News ve Dev.to tabanlı haber akışı
+- RSS kaynakları için seçili fallback haberleri
+- Geliştiriciler için ücretsiz araç kataloğu
+- Seçilmiş açık kaynak repo vitrini
+- CISA KEV tabanlı güvenlik uyarıları
+- Kısa ve kalıcı teknoloji rehberleri
 - Bootstrap veya build sistemi gerektirmeyen statik mimari
 
 ## Mimari
 
-Proje saf HTML, CSS ve JavaScript ile hazirlandi. GitHub Pages, Cloudflare Pages, Netlify veya herhangi bir statik hosting uzerinde dogrudan calisir.
+Proje saf HTML, CSS ve JavaScript ile hazırlandı. GitHub Pages, Cloudflare Pages, Netlify veya herhangi bir statik hosting üzerinde doğrudan çalışır.
 
-Canli kaynaklara erisim olmazsa uygulama bos ekran gostermek yerine `app.js` icindeki secilmis fallback veriyle calismaya devam eder.
+Canlı kaynaklara erişim olmazsa uygulama boş ekran göstermek yerine `js/app.js` içindeki seçilmiş fallback veriyle çalışmaya devam eder.
 
 ## Kaynaklar
 
@@ -26,21 +26,21 @@ Canli kaynaklara erisim olmazsa uygulama bos ekran gostermek yerine `app.js` ici
 - GitHub REST API: https://docs.github.com/rest
 - CISA Known Exploited Vulnerabilities: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
 
-## Calistirma
+## Çalıştırma
 
-Dosyalari dogrudan tarayicida acabilirsiniz:
+Dosyaları doğrudan tarayıcıda açabilirsiniz:
 
 ```bash
 open index.html
 ```
 
-Yerel HTTP sunucusu ile test etmek icin:
+Yerel HTTP sunucusu ile test etmek için:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Ardindan `http://localhost:8080` adresini acin.
+Ardından `http://localhost:8080` adresini açın.
 
 ## Lisans
 

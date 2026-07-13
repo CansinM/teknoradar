@@ -1,10 +1,10 @@
 const trends = [
-  "AI agent sistemleri",
+  "AI ajan sistemleri",
   "WebAssembly",
   "Passkeys",
   "Edge compute",
   "Rust servisleri",
-  "Supply chain security",
+  "Supply chain güvenliği",
   "Vector database",
   "Observability"
 ];
@@ -13,61 +13,61 @@ const fallbackNews = [
   {
     source: "RSS",
     type: "rss",
-    title: "AI altyapisinda maliyet ve gizlilik kararlarini birlikte dusunme donemi",
+    title: "AI altyapısında maliyet ve gizlilik kararlarını birlikte düşünme dönemi",
     url: "https://www.technologyreview.com/",
-    note: "Model kullanimi yayginlastikca veri akisi ve maliyet takibi urun mimarisinin parcasi oluyor."
+    note: "Model kullanımı yaygınlaştıkça veri akışı ve maliyet takibi ürün mimarisinin parçası oluyor."
   },
   {
     source: "Hacker News",
     type: "hn",
-    title: "Yeni web platform ozellikleri gelistirici deneyimini hizlandiriyor",
+    title: "Yeni web platform özellikleri geliştirici deneyimini hızlandırıyor",
     url: "https://news.ycombinator.com/",
-    note: "Tarayici API'leri artik sadece UI degil, dosya, kimlik ve yerel deneyim tarafini da etkiliyor."
+    note: "Tarayıcı API'leri artık sadece UI değil, dosya, kimlik ve yerel deneyim tarafını da etkiliyor."
   },
   {
     source: "Dev.to",
     type: "devto",
-    title: "Junior ekipler icin okunabilir kod ve review kulturu",
+    title: "Junior ekipler için okunabilir kod ve review kültürü",
     url: "https://dev.to/",
-    note: "Kucuk pratikler buyuk teknik borclari erken durdurabilir."
+    note: "Küçük pratikler büyük teknik borçları erken durdurabilir."
   },
   {
     source: "RSS",
     type: "rss",
-    title: "Acik kaynak paket seciminde lisans ve bakim ritmi kritik",
+    title: "Açık kaynak paket seçiminde lisans ve bakım ritmi kritik",
     url: "https://github.blog/",
-    note: "Yildiz sayisi tek basina yeterli sinyal degil; issue kalitesi ve release ritmi de okunmali."
+    note: "Yıldız sayısı tek başına yeterli sinyal değil; issue kalitesi ve release ritmi de okunmalı."
   }
 ];
 
 const tools = [
-  { name: "MDN Web Docs", category: "frontend", tag: "DOC", url: "https://developer.mozilla.org/", description: "HTML, CSS ve Web API'leri icin en guvenilir pratik referanslardan biri." },
-  { name: "Can I Use", category: "frontend", tag: "WEB", url: "https://caniuse.com/", description: "Tarayici destek durumlarini hizli kontrol etmek icin vazgecilmez kaynak." },
-  { name: "PageSpeed Insights", category: "frontend", tag: "PERF", url: "https://pagespeed.web.dev/", description: "Performans, erisilebilirlik ve SEO sinyalleri icin ucretsiz analiz." },
-  { name: "Postman Public API Network", category: "backend", tag: "API", url: "https://www.postman.com/explore", description: "API kesfi, test ve koleksiyon inceleme icin ucretsiz kaynak." },
-  { name: "JSONPlaceholder", category: "backend", tag: "MOCK", url: "https://jsonplaceholder.typicode.com/", description: "Frontend prototipleri icin sahte REST API." },
-  { name: "OWASP Cheat Sheet", category: "security", tag: "SEC", url: "https://cheatsheetseries.owasp.org/", description: "Web guvenligi icin uygulanabilir kontrol listeleri ve rehberler." },
-  { name: "CISA KEV Catalog", category: "security", tag: "KEV", url: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog", description: "Aktif istismar edilen aciklari takip etmek icin resmi kaynak." },
-  { name: "Public APIs", category: "data", tag: "DATA", url: "https://github.com/public-apis/public-apis", description: "Ucretsiz ve public API fikirleri icin genis kaynak listesi." },
-  { name: "Google Dataset Search", category: "data", tag: "DATA", url: "https://datasetsearch.research.google.com/", description: "Arastirma ve prototiplerde kullanilabilecek veri setlerini bulma araci." }
+  { name: "MDN Web Docs", category: "frontend", tag: "DOC", url: "https://developer.mozilla.org/", description: "HTML, CSS ve Web API'leri için en güvenilir pratik referanslardan biri." },
+  { name: "Can I Use", category: "frontend", tag: "WEB", url: "https://caniuse.com/", description: "Tarayıcı destek durumlarını hızlı kontrol etmek için vazgeçilmez kaynak." },
+  { name: "PageSpeed Insights", category: "frontend", tag: "PERF", url: "https://pagespeed.web.dev/", description: "Performans, erişilebilirlik ve SEO sinyalleri için ücretsiz analiz." },
+  { name: "Postman Public API Network", category: "backend", tag: "API", url: "https://www.postman.com/explore", description: "API keşfi, test ve koleksiyon inceleme için ücretsiz kaynak." },
+  { name: "JSONPlaceholder", category: "backend", tag: "MOCK", url: "https://jsonplaceholder.typicode.com/", description: "Frontend prototipleri için sahte REST API." },
+  { name: "OWASP Cheat Sheet", category: "security", tag: "SEC", url: "https://cheatsheetseries.owasp.org/", description: "Web güvenliği için uygulanabilir kontrol listeleri ve rehberler." },
+  { name: "CISA KEV Catalog", category: "security", tag: "KEV", url: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog", description: "Aktif istismar edilen açıkları takip etmek için resmi kaynak." },
+  { name: "Public APIs", category: "data", tag: "DATA", url: "https://github.com/public-apis/public-apis", description: "Ücretsiz ve public API fikirleri için geniş kaynak listesi." },
+  { name: "Google Dataset Search", category: "data", tag: "DATA", url: "https://datasetsearch.research.google.com/", description: "Araştırma ve prototiplerde kullanılabilecek veri setlerini bulma aracı." }
 ];
 
 const selectedRepos = [
-  { repo: "microsoft/playwright", category: "web", tag: "E2E", description: "Modern web uygulamalari icin guclu test otomasyonu.", fallbackStars: "70k+" },
-  { repo: "vercel/next.js", category: "web", tag: "WEB", description: "React tabanli full-stack web framework ekosistemi.", fallbackStars: "125k+" },
-  { repo: "supabase/supabase", category: "infra", tag: "DB", description: "Acik kaynak Firebase alternatifi; auth, database ve storage.", fallbackStars: "80k+" },
-  { repo: "ollama/ollama", category: "ai", tag: "AI", description: "Yerel LLM calistirmayi kolaylastiran populer acik kaynak arac.", fallbackStars: "90k+" },
-  { repo: "langchain-ai/langchain", category: "ai", tag: "AI", description: "LLM tabanli uygulamalar icin entegrasyon ve workflow kutuphanesi.", fallbackStars: "100k+" },
-  { repo: "trufflesecurity/trufflehog", category: "security", tag: "SEC", description: "Secret scanning ve credential sızıntısı tespiti icin arac.", fallbackStars: "18k+" }
+  { repo: "microsoft/playwright", category: "web", tag: "E2E", description: "Modern web uygulamaları için güçlü test otomasyonu.", fallbackStars: "70k+" },
+  { repo: "vercel/next.js", category: "web", tag: "WEB", description: "React tabanlı full-stack web framework ekosistemi.", fallbackStars: "125k+" },
+  { repo: "supabase/supabase", category: "infra", tag: "DB", description: "Açık kaynak Firebase alternatifi; auth, database ve storage.", fallbackStars: "80k+" },
+  { repo: "ollama/ollama", category: "ai", tag: "AI", description: "Yerel LLM çalıştırmayı kolaylaştıran popüler açık kaynak araç.", fallbackStars: "90k+" },
+  { repo: "langchain-ai/langchain", category: "ai", tag: "AI", description: "LLM tabanlı uygulamalar için entegrasyon ve workflow kütüphanesi.", fallbackStars: "100k+" },
+  { repo: "trufflesecurity/trufflehog", category: "security", tag: "SEC", description: "Secret scanning ve credential sızıntısı tespiti için araç.", fallbackStars: "18k+" }
 ];
 
 const guides = [
-  { title: "Yeni bir repo secmeden once 7 sinyal", tag: "OSS", description: "Lisans, issue kalitesi, release ritmi, maintainer aktivitesi, test durumu, dokumantasyon ve bagimlilik riski birlikte okunmali." },
-  { title: "Kucuk ekipler icin guvenlik baslangici", tag: "SEC", description: "2FA, secret yonetimi, dependency audit, backup testi ve admin panel envanteri ilk haftalik rutin olabilir." },
-  { title: "API kullanirken maliyetsiz kalma taktigi", tag: "API", description: "Cache, pagination, fallback veri ve rate limit dostu istek tasarimi statik projelerde hayat kurtarir." },
-  { title: "Frontend performans kontrolu", tag: "WEB", description: "Gorsel boyutu, font yuklemesi, JS miktari ve kritik CSS her deploy oncesi kontrol edilmeli." },
-  { title: "AI ozelligi eklemeden once", tag: "AI", description: "Veri gizliligi, cevap dogrulama, maliyet limiti ve kullanici beklentisi netlestirilmeden model eklenmemeli." },
-  { title: "GitHub Pages icin yayin rutini", tag: "OPS", description: "README, lisans, sitemap, favicon, meta etiketleri ve responsive test tamamlanmadan repo vitrine alinmamali." }
+  { title: "Yeni bir repo seçmeden önce 7 sinyal", tag: "OSS", description: "Lisans, issue kalitesi, release ritmi, maintainer aktivitesi, test durumu, dokümantasyon ve bağımlılık riski birlikte okunmalı." },
+  { title: "Küçük ekipler için güvenlik başlangıcı", tag: "SEC", description: "2FA, secret yönetimi, dependency audit, backup testi ve admin panel envanteri ilk haftalık rutin olabilir." },
+  { title: "API kullanırken maliyetsiz kalma taktiği", tag: "API", description: "Cache, pagination, fallback veri ve rate limit dostu istek tasarımı statik projelerde hayat kurtarır." },
+  { title: "Frontend performans kontrolü", tag: "WEB", description: "Görsel boyutu, font yüklemesi, JS miktarı ve kritik CSS her deploy öncesi kontrol edilmeli." },
+  { title: "AI özelliği eklemeden önce", tag: "AI", description: "Veri gizliliği, cevap doğrulama, maliyet limiti ve kullanıcı beklentisi netleştirilmeden model eklenmemeli." },
+  { title: "GitHub Pages için yayın rutini", tag: "OPS", description: "README, lisans, sitemap, favicon, meta etiketleri ve responsive test tamamlanmadan repo vitrine alınmamalı." }
 ];
 
 const kevFallback = [
@@ -135,7 +135,7 @@ function feedItem(item) {
       <div class="feed-meta"><span>${item.source}</span><span>${item.type.toUpperCase()}</span></div>
       <h3>${item.title}</h3>
       <p>${item.note}</p>
-      <a href="${item.url}" target="_blank" rel="noreferrer">Kaynakta oku</a>
+      <a href="${item.url}" target="_blank" rel="noreferrer">Kaynakta oku →</a>
     </article>
   `;
 }
@@ -144,7 +144,7 @@ async function renderNews() {
   const news = await getNews();
   const home = qs("[data-home-news]");
   const feed = qs("[data-news-feed]");
-  if (home) home.innerHTML = news.slice(0, 4).map((item) => `<article class="stack-item"><h3>${item.title}</h3><p>${item.note}</p><a href="${item.url}" target="_blank" rel="noreferrer">${item.source}</a></article>`).join("");
+  if (home) home.innerHTML = news.slice(0, 4).map((item) => `<article class="stack-item"><h3>${item.title}</h3><p>${item.note}</p><a href="${item.url}" target="_blank" rel="noreferrer">${item.source} →</a></article>`).join("");
   if (feed) {
     feed.innerHTML = news.map(feedItem).join("");
     wireFilters("[data-news-filter]", "[data-news-feed] [data-type]");
@@ -159,7 +159,7 @@ function renderTools() {
       <span class="tag">${tool.tag}</span>
       <h3>${tool.name}</h3>
       <p>${tool.description}</p>
-      <a href="${tool.url}" target="_blank" rel="noreferrer">Araci ac</a>
+      <a href="${tool.url}" target="_blank" rel="noreferrer">Aracı aç →</a>
     </article>
   `).join("");
   wireFilters("[data-tool-filter]", "[data-tools-grid] [data-type]");
@@ -181,8 +181,8 @@ async function renderRepos() {
       <span class="tag">${repo.tag}</span>
       <h3>${repo.repo}</h3>
       <p>${repo.description}</p>
-      <div class="repo-stats"><span>${repo.stars} stars</span><span>${repo.language}</span></div>
-      <a href="${repo.url}" target="_blank" rel="noreferrer">GitHub'da incele</a>
+      <div class="repo-stats"><span>⭐ ${repo.stars}</span><span>${repo.language}</span></div>
+      <a href="${repo.url}" target="_blank" rel="noreferrer">GitHub'da incele →</a>
     </article>
   `).join("");
   wireFilters("[data-repo-filter]", "[data-repo-grid] [data-type]");
@@ -204,7 +204,7 @@ async function renderSecurity() {
       <div class="feed-meta"><span>${item.vendorProject || "Vendor"}</span><span>${item.cveID || "CVE"}</span></div>
       <h3>${item.product || item.vulnerabilityName}</h3>
       <p>${item.vulnerabilityName || item.requiredAction}</p>
-      <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noreferrer">CISA kaynagini ac</a>
+      <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noreferrer">CISA kaynağını aç →</a>
     </article>
   `).join("");
   if (home) home.innerHTML = html;
