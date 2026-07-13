@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Secilmis acik kaynak projeler ve GitHub trend sinyalleri.">
+    <title>Repos | TeknoRadar</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="TeknoRadar ana sayfa"><img src="images/logo.png" alt="TeknoRadar" class="brand-logo"><span>TeknoRadar</span></a>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Menuyu ac veya kapat"><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="haberler.html">Haberler</a>
+        <a href="araclar.html">Araclar</a>
+        <a href="repos.html" aria-current="page">Repos</a>
+        <a href="guvenlik.html">Guvenlik</a>
+        <a href="rehberler.html">Rehberler</a>
+        <a href="hakkinda.html">Hakkinda</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Repos</p>
+        <h1>Secilmis acik kaynak projeler.</h1>
+        <p>Repo sagligi, lisans, yildiz sayisi ve kullanim alanina gore takip edilebilecek projeler.</p>
+      </section>
+
+      <section class="toolbar" aria-label="Repo filtreleri">
+        <button class="filter-button active" type="button" data-repo-filter="all">Tum repos</button>
+        <button class="filter-button" type="button" data-repo-filter="ai">AI</button>
+        <button class="filter-button" type="button" data-repo-filter="web">Web</button>
+        <button class="filter-button" type="button" data-repo-filter="infra">Infra</button>
+        <button class="filter-button" type="button" data-repo-filter="security">Guvenlik</button>
+      </section>
+
+      <section class="section">
+        <div class="repo-grid" data-repo-grid>
+          <p class="loading">Repo bilgileri yukleniyor...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><strong>TeknoRadar</strong><p>Acik kaynak projeleri secmeden once sinyalleri okuyun.</p></div>
+      <a href="araclar.html">Arac katalogu</a>
+    </footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CISA KEV, CVE ve kritik guvenlik duyurulari icin TeknoRadar guvenlik paneli.">
+    <title>Guvenlik | TeknoRadar</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="TeknoRadar ana sayfa"><img src="images/logo.png" alt="TeknoRadar" class="brand-logo"><span>TeknoRadar</span></a>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Menuyu ac veya kapat"><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="haberler.html">Haberler</a>
+        <a href="araclar.html">Araclar</a>
+        <a href="repos.html">Repos</a>
+        <a href="guvenlik.html" aria-current="page">Guvenlik</a>
+        <a href="rehberler.html">Rehberler</a>
+        <a href="hakkinda.html">Hakkinda</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Guvenlik</p>
+        <h1>CVE, KEV ve kritik duyurular icin hizli radar.</h1>
+        <p>Yamalanmasi gereken aciklari, etkilenen urunleri ve takip edilmesi gereken aksiyonlari sade bir ekranda izleyin.</p>
+      </section>
+
+      <section class="section two-column">
+        <div>
+          <div class="section-heading compact">
+            <p class="eyebrow">CISA KEV</p>
+            <h2>Aktif istismar sinyalleri</h2>
+          </div>
+          <div class="stack-list" data-kev-list>
+            <p class="loading">KEV katalogu yukleniyor...</p>
+          </div>
+        </div>
+        <aside class="check-panel">
+          <h2>Haftalik kontrol listesi</h2>
+          <label><input type="checkbox"> Kritik paketlerin versiyonlarini kontrol et</label>
+          <label><input type="checkbox"> Public endpoint ve admin panellerini gozden gecir</label>
+          <label><input type="checkbox"> Dependency audit ciktisini ekiple paylas</label>
+          <label><input type="checkbox"> Backup ve rollback senaryosunu test et</label>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><strong>TeknoRadar</strong><p>Guvenlik verisi karar destek amaclidir; resmi kaynakla dogrulayin.</p></div>
+      <a href="rehberler.html">Guvenlik rehberleri</a>
+    </footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>

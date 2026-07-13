@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TeknoRadar; teknoloji haberleri, acik kaynak projeler, gelistirici araclari ve guvenlik uyarilarini tek ekranda toplayan ucretsiz teknoloji merkezidir.">
+    <meta property="og:title" content="TeknoRadar">
+    <meta property="og:description" content="Bugunun teknoloji sinyallerini, acik kaynak projelerini ve guvenlik uyarilarini tek panelde takip edin.">
+    <meta property="og:type" content="website">
+    <title>TeknoRadar | Teknoloji Sinyal Merkezi</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="TeknoRadar ana sayfa">
+        <img src="images/logo.png" alt="TeknoRadar" class="brand-logo">
+        <span>TeknoRadar</span>
+      </a>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Menuyu ac veya kapat">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <a href="index.html" aria-current="page">Ana Sayfa</a>
+        <a href="haberler.html">Haberler</a>
+        <a href="araclar.html">Araclar</a>
+        <a href="repos.html">Repos</a>
+        <a href="guvenlik.html">Guvenlik</a>
+        <a href="rehberler.html">Rehberler</a>
+        <a href="hakkinda.html">Hakkinda</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero hero-dashboard">
+        <div class="hero-copy">
+          <p class="eyebrow">Acilis paneli</p>
+          <h1>Teknoloji dunyasinin bugunku sinyalleri.</h1>
+          <p class="hero-text">TeknoRadar; haberleri, trend basliklari, acik kaynak hareketlerini ve guvenlik uyarilarini tek bir odak ekraninda toplar.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="haberler.html">Haber akisini ac</a>
+            <a class="button ghost" href="guvenlik.html">Guvenlik radarina git</a>
+          </div>
+        </div>
+        <aside class="signal-board" aria-label="Canli teknoloji ozeti">
+          <div class="signal-board-header">
+            <span>Radar durumu</span>
+            <strong data-current-date>Bugun</strong>
+          </div>
+          <div class="signal-grid">
+            <div>
+              <span class="metric" data-metric="news">12</span>
+              <p>haber sinyali</p>
+            </div>
+            <div>
+              <span class="metric" data-metric="repos">8</span>
+              <p>repo vitrini</p>
+            </div>
+            <div>
+              <span class="metric" data-metric="security">4</span>
+              <p>kritik uyari</p>
+            </div>
+          </div>
+          <div class="pulse-list">
+            <span>AI altyapi</span>
+            <span>Web platform</span>
+            <span>Siber guvenlik</span>
+            <span>Acik kaynak</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Bugun one cikanlar</p>
+          <h2>Hizli karar vermek icin kisa ozet.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card accent-green">
+            <span class="icon-chip" aria-hidden="true">AI</span>
+            <h3>AI urunlesme hizi artiyor</h3>
+            <p>Model secimi, veri gizliligi ve maliyet optimizasyonu artik teknik karar kadar urun karari haline geldi.</p>
+          </article>
+          <article class="feature-card accent-blue">
+            <span class="icon-chip" aria-hidden="true">OSS</span>
+            <h3>Acik kaynak secimi stratejik</h3>
+            <p>Repo sagligi, lisans, issue akisi ve release ritmi proje seciminde ilk bakilan metrikler olmali.</p>
+          </article>
+          <article class="feature-card accent-red">
+            <span class="icon-chip" aria-hidden="true">CVE</span>
+            <h3>Guvenlik uyarilari operasyonel</h3>
+            <p>CISA KEV ve CVE duyurulari sadece guvenlik ekiplerinin degil, gelistirme takiminin da gunluk radari.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section band">
+        <div class="section-heading compact">
+          <p class="eyebrow">Trend teknolojiler</p>
+          <h2>Takip listesi</h2>
+        </div>
+        <div class="trend-strip" data-trends></div>
+      </section>
+
+      <section class="section two-column">
+        <div>
+          <div class="section-heading compact">
+            <p class="eyebrow">Haber sinyalleri</p>
+            <h2>Public kaynaklardan akilli akis</h2>
+          </div>
+          <div class="stack-list" data-home-news>
+            <p class="loading">Haberler yukleniyor...</p>
+          </div>
+        </div>
+        <div>
+          <div class="section-heading compact">
+            <p class="eyebrow">Guvenlik uyarilari</p>
+            <h2>Yamalanmasi gerekenler</h2>
+          </div>
+          <div class="stack-list" data-home-security>
+            <p class="loading">Guvenlik verileri yukleniyor...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>TeknoRadar</strong>
+        <p>Ucretsiz kaynaklarla teknoloji takibi. GitHub Pages uyumlu, maliyetsiz, acik ve sade.</p>
+      </div>
+      <a href="hakkinda.html">Editoryal yaklasim</a>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
