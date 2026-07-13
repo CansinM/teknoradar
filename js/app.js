@@ -13,60 +13,60 @@ const fallbackNews = [
   {
     source: "RSS",
     type: "rss",
-    title: "AI altyapisinda maliyet ve gizlilik kararlarini birlikte dusunme donemi",
+    title: "AI altyapısında maliyet ve gizlilik kararlarını birlikte düşünme dönemi",
     url: "https://www.technologyreview.com/",
-    note: "Model kullanimi yayginlastikca veri akışı ve maliyet takibi urun mimarisinin parcasi oluyor."
+    note: "Model kullanımı yaygınlaştıkça veri akışı ve maliyet takibi ürün mimarisinin parçası oluyor."
   },
   {
     source: "Hacker News",
     type: "hn",
-    title: "Yeni web platform ozellikleri geliştirici deneyimini hizlandiriyor",
+    title: "Yeni web platform özellikleri geliştirici deneyimini hızlandırıyor",
     url: "https://news.ycombinator.com/",
-    note: "Tarayici API'leri artik sadece UI değil, dosya, kimlik ve yerel deneyim tarafini da etkiliyor."
+    note: "Tarayıcı API'leri artık sadece UI değil, dosya, kimlik ve yerel deneyim tarafını da etkiliyor."
   },
   {
     source: "Dev.to",
     type: "devto",
-    title: "Junior ekipler için okunabilir kod ve review kulturu",
+    title: "Junior ekipler için okunabilir kod ve review kültürü",
     url: "https://dev.to/",
-    note: "Kucuk pratikler buyuk teknik borclari erken durdurabilir."
+    note: "Küçük pratikler büyük teknik borçları erken durdurabilir."
   },
   {
     source: "RSS",
     type: "rss",
-    title: "Açık kaynak paket seciminde lisans ve bakim ritmi kritik",
+    title: "Açık kaynak paket seçiminde lisans ve bakım ritmi kritik",
     url: "https://github.blog/",
-    note: "Yildiz sayisi tek basina yeterli sinyal değil; issue kalitesi ve release ritmi de okunmali."
+    note: "Yıldız sayısı tek başına yeterli sinyal değil; issue kalitesi ve release ritmi de okunmalı."
   }
 ];
 
 const tools = [
-  { name: "MDN Web Docs", category: "frontend", tag: "DOC", url: "https://developer.mozilla.org/", description: "HTML, CSS ve Web API'leri için en guvenilir pratik referanslardan biri." },
-  { name: "Can I Use", category: "frontend", tag: "WEB", url: "https://caniuse.com/", description: "Tarayici destek durumlarini hizli kontrol etmek için vazgecilmez kaynak." },
-  { name: "PageSpeed Insights", category: "frontend", tag: "PERF", url: "https://pagespeed.web.dev/", description: "Performans, erisilebilirlik ve SEO sinyalleri için ücretsiz analiz." },
-  { name: "Postman Public API Network", category: "backend", tag: "API", url: "https://www.postman.com/explore", description: "API kesfi, test ve koleksiyon inceleme için ücretsiz kaynak." },
+  { name: "MDN Web Docs", category: "frontend", tag: "DOC", url: "https://developer.mozilla.org/", description: "HTML, CSS ve Web API'leri için en güvenilir pratik referanslardan biri." },
+  { name: "Can I Use", category: "frontend", tag: "WEB", url: "https://caniuse.com/", description: "Tarayıcı destek durumlarini hızlı kontrol etmek için vazgeçilmez kaynak." },
+  { name: "PageSpeed Insights", category: "frontend", tag: "PERF", url: "https://pagespeed.web.dev/", description: "Performans, erişilebilirlik ve SEO sinyalleri için ücretsiz analiz." },
+  { name: "Postman Public API Network", category: "backend", tag: "API", url: "https://www.postman.com/explore", description: "API keşfi, test ve koleksiyon inceleme için ücretsiz kaynak." },
   { name: "JSONPlaceholder", category: "backend", tag: "MOCK", url: "https://jsonplaceholder.typicode.com/", description: "Frontend prototipleri için sahte REST API." },
-  { name: "OWASP Cheat Sheet", category: "security", tag: "SEC", url: "https://cheatsheetseries.owasp.org/", description: "Web guvenligi için uygulanabilir kontrol listeleri ve rehberler." },
-  { name: "CISA KEV Catalog", category: "security", tag: "KEV", url: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog", description: "Aktif istismar edilen aciklari takip etmek için resmi kaynak." },
+  { name: "OWASP Cheat Sheet", category: "security", tag: "SEC", url: "https://cheatsheetseries.owasp.org/", description: "Web güvenliği için uygulanabilir kontrol listeleri ve rehberler." },
+  { name: "CISA KEV Catalog", category: "security", tag: "KEV", url: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog", description: "Aktif istismar edilen açıkları takip etmek için resmi kaynak." },
   { name: "Public APIs", category: "data", tag: "DATA", url: "https://github.com/public-apis/public-apis", description: "Ücretsiz ve public API fikirleri için genis kaynak listesi." },
-  { name: "Google Dataset Search", category: "data", tag: "DATA", url: "https://datasetsearch.research.google.com/", description: "Arastirma ve prototiplerde kullanilabilecek veri setlerini bulma araci." }
+  { name: "Google Dataset Search", category: "data", tag: "DATA", url: "https://datasetsearch.research.google.com/", description: "Araştırma ve prototiplerde kullanılabilecek veri setlerini bulma aracı." }
 ];
 
 const selectedRepos = [
-  { repo: "microsoft/playwright", category: "web", tag: "E2E", description: "Modern web uygulamalari için guclu test otomasyonu.", fallbackStars: "70k+" },
+  { repo: "microsoft/playwright", category: "web", tag: "E2E", description: "Modern web uygulamaları için guclu test otomasyonu.", fallbackStars: "70k+" },
   { repo: "vercel/next.js", category: "web", tag: "WEB", description: "React tabanli full-stack web framework ekosistemi.", fallbackStars: "125k+" },
   { repo: "supabase/supabase", category: "infra", tag: "DB", description: "Açık kaynak Firebase alternatifi; auth, database ve storage.", fallbackStars: "80k+" },
-  { repo: "ollama/ollama", category: "ai", tag: "AI", description: "Yerel LLM calistirmayi kolaylastiran populer açık kaynak arac.", fallbackStars: "90k+" },
-  { repo: "langchain-ai/langchain", category: "ai", tag: "AI", description: "LLM tabanli uygulamalar için entegrasyon ve workflow kutuphanesi.", fallbackStars: "100k+" },
+  { repo: "ollama/ollama", category: "ai", tag: "AI", description: "Yerel LLM çalıştırmayı kolaylaştıran populer açık kaynak arac.", fallbackStars: "90k+" },
+  { repo: "langchain-ai/langchain", category: "ai", tag: "AI", description: "LLM tabanli uygulamalar için entegrasyon ve workflow kütüphanesi.", fallbackStars: "100k+" },
   { repo: "trufflesecurity/trufflehog", category: "security", tag: "SEC", description: "Secret scanning ve credential sızıntısı tespiti için arac.", fallbackStars: "18k+" }
 ];
 
 const guides = [
-  { title: "Yeni bir repo secmeden once 7 sinyal", tag: "OSS", description: "Lisans, issue kalitesi, release ritmi, maintainer aktivitesi, test durumu, dokumantasyon ve bagimlilik riski birlikte okunmali." },
-  { title: "Kucuk ekipler için güvenlik baslangici", tag: "SEC", description: "2FA, secret yonetimi, dependency audit, backup testi ve admin panel envanteri ilk haftalik rutin olabilir." },
-  { title: "API kullanirken maliyetsiz kalma taktigi", tag: "API", description: "Cache, pagination, fallback veri ve rate limit dostu istek tasarimi statik projelerde hayat kurtarir." },
-  { title: "Frontend performans kontrolu", tag: "WEB", description: "Gorsel boyutu, font yuklemesi, JS miktari ve kritik CSS her deploy oncesi kontrol edilmeli." },
-  { title: "AI ozelligi eklemeden once", tag: "AI", description: "Veri gizliliği, cevap dogrulama, maliyet limiti ve kullanici beklentisi netlestirilmeden model eklenmemeli." },
+  { title: "Yeni bir repo seçmeden önce 7 sinyal", tag: "OSS", description: "Lisans, issue kalitesi, release ritmi, maintainer aktivitesi, test durumu, dokumantasyon ve bagimlilik riski birlikte okunmalı." },
+  { title: "Küçük ekipler için güvenlik başlangıcı", tag: "SEC", description: "2FA, secret yonetimi, dependency audit, backup testi ve admin panel envanteri ilk haftalık rutin olabilir." },
+  { title: "API kullanırken maliyetsiz kalma taktigi", tag: "API", description: "Cache, pagination, fallback veri ve rate limit dostu istek tasarımı statik projelerde hayat kurtarir." },
+  { title: "Frontend performans kontrolü", tag: "WEB", description: "Görsel boyutu, font yüklemesi, JS miktarı ve kritik CSS her deploy oncesi kontrol edilmeli." },
+  { title: "AI ozelligi eklemeden önce", tag: "AI", description: "Veri gizliliği, cevap doğrulama, maliyet limiti ve kullanici beklentisi netlestirilmeden model eklenmemeli." },
   { title: "GitHub Pages için yayın rutini", tag: "OPS", description: "README, lisans, sitemap, favicon, meta etiketleri ve responsive test tamamlanmadan repo vitrine alinmamali." }
 ];
 

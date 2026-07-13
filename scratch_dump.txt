@@ -1,0 +1,997 @@
+--- /Users/cansinmemis/CansinProjeler/TeknoRadar/index.html ---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TeknoRadar; teknoloji haberleri, açık kaynak projeler, geliştirici araclari ve güvenlik uyarılarını tek ekranda toplayan ücretsiz teknoloji merkezidir.">
+    <meta property="og:title" content="TeknoRadar">
+    <meta property="og:description" content="Bugünün teknoloji sinyallerini, açık kaynak projelerini ve güvenlik uyarılarını tek panelde takip edin.">
+    <meta property="og:type" content="website">
+    <title>TeknoRadar | Teknoloji Sinyal Merkezi</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="TeknoRadar ana sayfa">
+        <img src="images/logo.png" alt="TeknoRadar" class="brand-logo">
+        <span>TeknoRadar</span>
+      </a>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Menüyü aç veya kapat">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <a href="index.html" aria-current="page">Ana Sayfa</a>
+        <a href="pages/haberler.html">Haberler</a>
+        <a href="pages/araclar.html">Araçlar</a>
+        <a href="pages/repos.html">Repos</a>
+        <a href="pages/guvenlik.html">Güvenlik</a>
+        <a href="pages/rehberler.html">Rehberler</a>
+        <a href="pages/hakkinda.html">Hakkında</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero hero-dashboard">
+        <div class="hero-copy">
+          <p class="eyebrow">Açılış paneli</p>
+          <h1>Teknoloji dünyasının bugunku sinyalleri.</h1>
+          <p class="hero-text">TeknoRadar; haberleri, trend başlıkları, açık kaynak hareketlerini ve güvenlik uyarılarını tek bir odak ekraninda toplar.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="pages/haberler.html">Haber akışını aç</a>
+            <a class="button ghost" href="pages/guvenlik.html">Güvenlik radarina git</a>
+          </div>
+        </div>
+        <aside class="signal-board" aria-label="Canli teknoloji ozeti">
+          <div class="signal-board-header">
+            <span>Radar durumu</span>
+            <strong data-current-date>Bugün</strong>
+          </div>
+          <div class="signal-grid">
+            <div>
+              <span class="metric" data-metric="news">12</span>
+              <p>haber sinyali</p>
+            </div>
+            <div>
+              <span class="metric" data-metric="repos">8</span>
+              <p>repo vitrini</p>
+            </div>
+            <div>
+              <span class="metric" data-metric="security">4</span>
+              <p>kritik uyarı</p>
+            </div>
+          </div>
+          <div class="pulse-list">
+            <span>AI altyapı</span>
+            <span>Web platform</span>
+            <span>Siber güvenlik</span>
+            <span>Açık kaynak</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Bugün öne çıkanlar</p>
+          <h2>Hızlı karar vermek için kısa özet.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card accent-green">
+            <span class="icon-chip" aria-hidden="true">AI</span>
+            <h3>AI ürünleşme hızı artıyor</h3>
+            <p>Model seçimi, veri gizliliği ve maliyet optimizasyonu artik teknik karar kadar ürün kararı haline geldi.</p>
+          </article>
+          <article class="feature-card accent-blue">
+            <span class="icon-chip" aria-hidden="true">OSS</span>
+            <h3>Açık kaynak seçimi stratejik</h3>
+            <p>Repo sagligi, lisans, issue akışı ve release ritmi proje seciminde ilk bakilan metrikler olmali.</p>
+          </article>
+          <article class="feature-card accent-red">
+            <span class="icon-chip" aria-hidden="true">CVE</span>
+            <h3>Güvenlik uyarıları operasyonel</h3>
+            <p>CISA KEV ve CVE duyurulari sadece güvenlik ekiplerinin değil, gelistirme takımının da günlük radarı.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section band">
+        <div class="section-heading compact">
+          <p class="eyebrow">Trend teknolojiler</p>
+          <h2>Takip listesi</h2>
+        </div>
+        <div class="trend-strip" data-trends></div>
+      </section>
+
+      <section class="section two-column">
+        <div>
+          <div class="section-heading compact">
+            <p class="eyebrow">Haber sinyalleri</p>
+            <h2>Public kaynaklardan akilli akis</h2>
+          </div>
+          <div class="stack-list" data-home-news>
+            <p class="loading">Haberler yukleniyor...</p>
+          </div>
+        </div>
+        <div>
+          <div class="section-heading compact">
+            <p class="eyebrow">Güvenlik uyarıları</p>
+            <h2>Yamalanmasi gerekenler</h2>
+          </div>
+          <div class="stack-list" data-home-security>
+            <p class="loading">Güvenlik verileri yukleniyor...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pro-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="TeknoRadar" class="brand-logo">
+        <span>TeknoRadar</span>
+      </a>
+      <p>Teknoloji dünyasının yeni nesil radarı. Güncel haberler, açık kaynak projeler ve güvenlik uyarıları tek bir platformda.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="pages/haberler.html">Haberler</a></li>
+        <li><a href="pages/araclar.html">Araçlar</a></li>
+        <li><a href="pages/repos.html">GitHub Repos</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kaynaklar</h4>
+      <ul>
+        <li><a href="pages/guvenlik.html">Güvenlik Uyarıları</a></li>
+        <li><a href="pages/rehberler.html">Rehberler</a></li>
+        <li><a href="pages/blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kurumsal</h4>
+      <ul>
+        <li><a href="pages/hakkinda.html">Hakkımızda</a></li>
+        <li><a href="#">Gizlilik Politikası</a></li>
+        <li><a href="#">Kullanım Şartları</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 TeknoRadar. Tüm hakları saklıdır.
+  </div>
+</footer>
+
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
+
+
+--- /Users/cansinmemis/CansinProjeler/TeknoRadar/js/app.js ---
+const trends = [
+  "AI agent sistemleri",
+  "WebAssembly",
+  "Passkeys",
+  "Edge compute",
+  "Rust servisleri",
+  "Supply chain security",
+  "Vector database",
+  "Observability"
+];
+
+const fallbackNews = [
+  {
+    source: "RSS",
+    type: "rss",
+    title: "AI altyapisinda maliyet ve gizlilik kararlarini birlikte dusunme donemi",
+    url: "https://www.technologyreview.com/",
+    note: "Model kullanimi yayginlastikca veri akışı ve maliyet takibi urun mimarisinin parcasi oluyor."
+  },
+  {
+    source: "Hacker News",
+    type: "hn",
+    title: "Yeni web platform ozellikleri geliştirici deneyimini hizlandiriyor",
+    url: "https://news.ycombinator.com/",
+    note: "Tarayici API'leri artik sadece UI değil, dosya, kimlik ve yerel deneyim tarafini da etkiliyor."
+  },
+  {
+    source: "Dev.to",
+    type: "devto",
+    title: "Junior ekipler için okunabilir kod ve review kulturu",
+    url: "https://dev.to/",
+    note: "Kucuk pratikler buyuk teknik borclari erken durdurabilir."
+  },
+  {
+    source: "RSS",
+    type: "rss",
+    title: "Açık kaynak paket seciminde lisans ve bakim ritmi kritik",
+    url: "https://github.blog/",
+    note: "Yildiz sayisi tek basina yeterli sinyal değil; issue kalitesi ve release ritmi de okunmali."
+  }
+];
+
+const tools = [
+  { name: "MDN Web Docs", category: "frontend", tag: "DOC", url: "https://developer.mozilla.org/", description: "HTML, CSS ve Web API'leri için en guvenilir pratik referanslardan biri." },
+  { name: "Can I Use", category: "frontend", tag: "WEB", url: "https://caniuse.com/", description: "Tarayici destek durumlarini hizli kontrol etmek için vazgecilmez kaynak." },
+  { name: "PageSpeed Insights", category: "frontend", tag: "PERF", url: "https://pagespeed.web.dev/", description: "Performans, erisilebilirlik ve SEO sinyalleri için ücretsiz analiz." },
+  { name: "Postman Public API Network", category: "backend", tag: "API", url: "https://www.postman.com/explore", description: "API kesfi, test ve koleksiyon inceleme için ücretsiz kaynak." },
+  { name: "JSONPlaceholder", category: "backend", tag: "MOCK", url: "https://jsonplaceholder.typicode.com/", description: "Frontend prototipleri için sahte REST API." },
+  { name: "OWASP Cheat Sheet", category: "security", tag: "SEC", url: "https://cheatsheetseries.owasp.org/", description: "Web guvenligi için uygulanabilir kontrol listeleri ve rehberler." },
+  { name: "CISA KEV Catalog", category: "security", tag: "KEV", url: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog", description: "Aktif istismar edilen aciklari takip etmek için resmi kaynak." },
+  { name: "Public APIs", category: "data", tag: "DATA", url: "https://github.com/public-apis/public-apis", description: "Ücretsiz ve public API fikirleri için genis kaynak listesi." },
+  { name: "Google Dataset Search", category: "data", tag: "DATA", url: "https://datasetsearch.research.google.com/", description: "Arastirma ve prototiplerde kullanilabilecek veri setlerini bulma araci." }
+];
+
+const selectedRepos = [
+  { repo: "microsoft/playwright", category: "web", tag: "E2E", description: "Modern web uygulamalari için guclu test otomasyonu.", fallbackStars: "70k+" },
+  { repo: "vercel/next.js", category: "web", tag: "WEB", description: "React tabanli full-stack web framework ekosistemi.", fallbackStars: "125k+" },
+  { repo: "supabase/supabase", category: "infra", tag: "DB", description: "Açık kaynak Firebase alternatifi; auth, database ve storage.", fallbackStars: "80k+" },
+  { repo: "ollama/ollama", category: "ai", tag: "AI", description: "Yerel LLM calistirmayi kolaylastiran populer açık kaynak arac.", fallbackStars: "90k+" },
+  { repo: "langchain-ai/langchain", category: "ai", tag: "AI", description: "LLM tabanli uygulamalar için entegrasyon ve workflow kutuphanesi.", fallbackStars: "100k+" },
+  { repo: "trufflesecurity/trufflehog", category: "security", tag: "SEC", description: "Secret scanning ve credential sızıntısı tespiti için arac.", fallbackStars: "18k+" }
+];
+
+const guides = [
+  { title: "Yeni bir repo secmeden once 7 sinyal", tag: "OSS", description: "Lisans, issue kalitesi, release ritmi, maintainer aktivitesi, test durumu, dokumantasyon ve bagimlilik riski birlikte okunmali." },
+  { title: "Kucuk ekipler için güvenlik baslangici", tag: "SEC", description: "2FA, secret yonetimi, dependency audit, backup testi ve admin panel envanteri ilk haftalik rutin olabilir." },
+  { title: "API kullanirken maliyetsiz kalma taktigi", tag: "API", description: "Cache, pagination, fallback veri ve rate limit dostu istek tasarimi statik projelerde hayat kurtarir." },
+  { title: "Frontend performans kontrolu", tag: "WEB", description: "Gorsel boyutu, font yuklemesi, JS miktari ve kritik CSS her deploy oncesi kontrol edilmeli." },
+  { title: "AI ozelligi eklemeden once", tag: "AI", description: "Veri gizliliği, cevap dogrulama, maliyet limiti ve kullanici beklentisi netlestirilmeden model eklenmemeli." },
+  { title: "GitHub Pages için yayın rutini", tag: "OPS", description: "README, lisans, sitemap, favicon, meta etiketleri ve responsive test tamamlanmadan repo vitrine alinmamali." }
+];
+
+const kevFallback = [
+  { vendorProject: "GitLab", product: "Community and Enterprise Edition", vulnerabilityName: "Critical authentication bypass risk", cveID: "CVE-2023-7028", dateAdded: "2024-05-01", requiredAction: "Update to fixed versions and review exposed instances." },
+  { vendorProject: "Atlassian", product: "Confluence", vulnerabilityName: "Remote code execution risk", cveID: "CVE-2023-22527", dateAdded: "2024-01-24", requiredAction: "Patch internet-facing servers and inspect logs." },
+  { vendorProject: "Apache", product: "Struts", vulnerabilityName: "Remote code execution risk", cveID: "CVE-2023-50164", dateAdded: "2024-01-10", requiredAction: "Upgrade affected deployments and verify dependencies." }
+];
+
+const qs = (selector) => document.querySelector(selector);
+const qsa = (selector) => [...document.querySelectorAll(selector)];
+
+function initMenu() {
+  const button = qs("[data-menu-toggle]");
+  const nav = qs("[data-nav]");
+  if (!button || !nav) return;
+  button.addEventListener("click", () => nav.classList.toggle("is-open"));
+}
+
+function setDate() {
+  const target = qs("[data-current-date]");
+  if (!target) return;
+  target.textContent = new Intl.DateTimeFormat("tr-TR", { day: "numeric", month: "long", year: "numeric" }).format(new Date());
+}
+
+function renderTrends() {
+  const target = qs("[data-trends]");
+  if (!target) return;
+  target.innerHTML = trends.map((trend) => `<span class="trend-chip">${trend}</span>`).join("");
+}
+
+async function fetchJson(url) {
+  const response = await fetch(url, { headers: { accept: "application/json" } });
+  if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+  return response.json();
+}
+
+async function getNews() {
+  try {
+    const topIds = await fetchJson("https://hacker-news.firebaseio.com/v0/topstories.json");
+    const hnItems = await Promise.all(topIds.slice(0, 5).map((id) => fetchJson(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)));
+    const devItems = await fetchJson("https://dev.to/api/articles?tag=technology&per_page=5");
+    const mappedHn = hnItems.filter(Boolean).map((item) => ({
+      source: "Hacker News",
+      type: "hn",
+      title: item.title,
+      url: item.url || `https://news.ycombinator.com/item?id=${item.id}`,
+      note: `${item.score || 0} puan, ${item.descendants || 0} yorum`
+    }));
+    const mappedDev = devItems.map((item) => ({
+      source: "Dev.to",
+      type: "devto",
+      title: item.title,
+      url: item.url,
+      note: item.description || `${item.public_reactions_count || 0} reaksiyon`
+    }));
+    return [...mappedHn, ...mappedDev, ...fallbackNews.filter((item) => item.type === "rss")];
+  } catch {
+    return fallbackNews;
+  }
+}
+
+function feedItem(item) {
+  return `
+    <article class="feed-item" data-type="${item.type}">
+      <div class="feed-meta"><span>${item.source}</span><span>${item.type.toUpperCase()}</span></div>
+      <h3>${item.title}</h3>
+      <p>${item.note}</p>
+      <a href="${item.url}" target="_blank" rel="noreferrer">Kaynakta oku</a>
+    </article>
+  `;
+}
+
+async function renderNews() {
+  const news = await getNews();
+  const home = qs("[data-home-news]");
+  const feed = qs("[data-news-feed]");
+  if (home) home.innerHTML = news.slice(0, 4).map((item) => `<article class="stack-item"><h3>${item.title}</h3><p>${item.note}</p><a href="${item.url}" target="_blank" rel="noreferrer">${item.source}</a></article>`).join("");
+  if (feed) {
+    feed.innerHTML = news.map(feedItem).join("");
+    wireFilters("[data-news-filter]", "[data-news-feed] [data-type]");
+  }
+}
+
+function renderTools() {
+  const target = qs("[data-tools-grid]");
+  if (!target) return;
+  target.innerHTML = tools.map((tool) => `
+    <article class="resource-card" data-type="${tool.category}">
+      <span class="tag">${tool.tag}</span>
+      <h3>${tool.name}</h3>
+      <p>${tool.description}</p>
+      <a href="${tool.url}" target="_blank" rel="noreferrer">Araci aç</a>
+    </article>
+  `).join("");
+  wireFilters("[data-tool-filter]", "[data-tools-grid] [data-type]");
+}
+
+async function renderRepos() {
+  const target = qs("[data-repo-grid]");
+  if (!target) return;
+  const cards = await Promise.all(selectedRepos.map(async (item) => {
+    try {
+      const repo = await fetchJson(`https://api.github.com/repos/${item.repo}`);
+      return { ...item, stars: Intl.NumberFormat("en", { notation: "compact" }).format(repo.stargazers_count), language: repo.language || "Mixed", url: repo.html_url };
+    } catch {
+      return { ...item, stars: item.fallbackStars, language: "Mixed", url: `https://github.com/${item.repo}` };
+    }
+  }));
+  target.innerHTML = cards.map((repo) => `
+    <article class="repo-card" data-type="${repo.category}">
+      <span class="tag">${repo.tag}</span>
+      <h3>${repo.repo}</h3>
+      <p>${repo.description}</p>
+      <div class="repo-stats"><span>${repo.stars} stars</span><span>${repo.language}</span></div>
+      <a href="${repo.url}" target="_blank" rel="noreferrer">GitHub'da incele</a>
+    </article>
+  `).join("");
+  wireFilters("[data-repo-filter]", "[data-repo-grid] [data-type]");
+}
+
+async function renderSecurity() {
+  const home = qs("[data-home-security]");
+  const kevList = qs("[data-kev-list]");
+  if (!home && !kevList) return;
+  let items = kevFallback;
+  try {
+    const data = await fetchJson("https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json");
+    items = data.vulnerabilities.slice(0, 8);
+  } catch {
+    items = kevFallback;
+  }
+  const html = items.map((item) => `
+    <article class="stack-item">
+      <div class="feed-meta"><span>${item.vendorProject || "Vendor"}</span><span>${item.cveID || "CVE"}</span></div>
+      <h3>${item.product || item.vulnerabilityName}</h3>
+      <p>${item.vulnerabilityName || item.requiredAction}</p>
+      <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noreferrer">CISA kaynagini aç</a>
+    </article>
+  `).join("");
+  if (home) home.innerHTML = html;
+  if (kevList) kevList.innerHTML = html;
+}
+
+function renderGuides() {
+  const target = qs("[data-guide-grid]");
+  if (!target) return;
+  target.innerHTML = guides.map((guide) => `
+    <article class="guide-card">
+      <span class="tag">${guide.tag}</span>
+      <h3>${guide.title}</h3>
+      <p>${guide.description}</p>
+    </article>
+  `).join("");
+}
+
+function wireFilters(buttonSelector, itemSelector) {
+  qsa(buttonSelector).forEach((button) => {
+    button.addEventListener("click", () => {
+      const value = button.dataset.newsFilter || button.dataset.toolFilter || button.dataset.repoFilter;
+      qsa(buttonSelector).forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
+      qsa(itemSelector).forEach((item) => {
+        item.hidden = value !== "all" && item.dataset.type !== value;
+      });
+    });
+  });
+}
+
+initMenu();
+setDate();
+renderTrends();
+renderNews();
+renderTools();
+renderRepos();
+renderSecurity();
+renderGuides();
+
+
+--- /Users/cansinmemis/CansinProjeler/TeknoRadar/pages/repos.html ---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Secilmis açık kaynak projeler ve GitHub trend sinyalleri.">
+    <title>Repos | TeknoRadar</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="TeknoRadar ana sayfa"><img src="../images/logo.png" alt="TeknoRadar" class="brand-logo"><span>TeknoRadar</span></a>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Menüyü aç veya kapat"><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav>
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="haberler.html">Haberler</a>
+        <a href="araclar.html">Araçlar</a>
+        <a href="repos.html" aria-current="page">Repos</a>
+        <a href="guvenlik.html">Güvenlik</a>
+        <a href="rehberler.html">Rehberler</a>
+        <a href="hakkinda.html">Hakkında</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Repos</p>
+        <h1>Secilmis açık kaynak projeler.</h1>
+        <p>Repo sagligi, lisans, yildiz sayisi ve kullanim alanina göre takip edilebilecek projeler.</p>
+      </section>
+
+      <section class="toolbar" aria-label="Repo filtreleri">
+        <button class="filter-button active" type="button" data-repo-filter="all">Tüm repos</button>
+        <button class="filter-button" type="button" data-repo-filter="ai">AI</button>
+        <button class="filter-button" type="button" data-repo-filter="web">Web</button>
+        <button class="filter-button" type="button" data-repo-filter="infra">Infra</button>
+        <button class="filter-button" type="button" data-repo-filter="security">Güvenlik</button>
+      </section>
+
+      <section class="section">
+        <div class="repo-grid" data-repo-grid>
+          <p class="loading">Repo bilgileri yukleniyor...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pro-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <a class="brand" href="../index.html">
+        <img src="../images/logo.png" alt="TeknoRadar" class="brand-logo">
+        <span>TeknoRadar</span>
+      </a>
+      <p>Teknoloji dünyasının yeni nesil radarı. Güncel haberler, açık kaynak projeler ve güvenlik uyarıları tek bir platformda.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="haberler.html">Haberler</a></li>
+        <li><a href="araclar.html">Araçlar</a></li>
+        <li><a href="repos.html">GitHub Repos</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kaynaklar</h4>
+      <ul>
+        <li><a href="guvenlik.html">Güvenlik Uyarıları</a></li>
+        <li><a href="rehberler.html">Rehberler</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kurumsal</h4>
+      <ul>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="#">Gizlilik Politikası</a></li>
+        <li><a href="#">Kullanım Şartları</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 TeknoRadar. Tüm hakları saklıdır.
+  </div>
+</footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>
+
+
+--- /Users/cansinmemis/CansinProjeler/TeknoRadar/pages/blog.html ---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=haberler.html">
+    <title>TeknoRadar</title>
+  </head>
+  <body>
+    <p><a href="haberler.html">Haberler sayfasina gidin.</a></p>
+  </body>
+</html>
+
+
+--- /Users/cansinmemis/CansinProjeler/TeknoRadar/pages/haberler.html ---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hacker News, Dev.to ve secili RSS kaynaklarindan teknoloji haberleri.">
+    <title>Haberler | TeknoRadar</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="TeknoRadar ana sayfa">
+        <img src="../images/logo.png" alt="TeknoRadar" class="brand-logo">
+        <span>TeknoRadar</span>
+      </a>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Menüyü aç veya kapat"><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav>
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="haberler.html" aria-current="page">Haberler</a>
+        <a href="araclar.html">Araçlar</a>
+        <a href="repos.html">Repos</a>
+        <a href="guvenlik.html">Güvenlik</a>
+        <a href="rehberler.html">Rehberler</a>
+        <a href="hakkinda.html">Hakkında</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Haberler</p>
+        <h1>HN, Dev.to ve RSS tabanli teknoloji akışı.</h1>
+        <p>Haberleri kaynak, konu ve onem sinyaline göre tarayin. Veriler public kaynaklardan cekilir; erisim olmadiginda yerel secili akis gosterilir.</p>
+      </section>
+
+      <section class="toolbar" aria-label="Haber filtreleri">
+        <button class="filter-button active" type="button" data-news-filter="all">Tüm akış</button>
+        <button class="filter-button" type="button" data-news-filter="hn">Hacker News</button>
+        <button class="filter-button" type="button" data-news-filter="devto">Dev.to</button>
+        <button class="filter-button" type="button" data-news-filter="rss">RSS secmeleri</button>
+      </section>
+
+      <section class="section">
+        <div class="news-layout">
+          <div class="feed-list" data-news-feed>
+            <p class="loading">Haber akışı yukleniyor...</p>
+          </div>
+          <aside class="source-panel">
+            <h2>Kaynak politikasi</h2>
+            <p>TeknoRadar, haberleri yorum yerine kaynak linki ve kısa sinyal notuyla sunar. Amac hizli tarama, tarafsiz yonlendirme ve kaynak seffafligidir.</p>
+            <div class="source-list">
+              <a href="https://github.com/HackerNews/API" target="_blank" rel="noreferrer">Hacker News API</a>
+              <a href="https://developers.forem.com/api" target="_blank" rel="noreferrer">Forem / Dev.to API</a>
+              <a href="https://www.theverge.com/rss/index.xml" target="_blank" rel="noreferrer">The Verge RSS</a>
+              <a href="https://feeds.arstechnica.com/arstechnica/index" target="_blank" rel="noreferrer">Ars Technica RSS</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pro-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <a class="brand" href="../index.html">
+        <img src="../images/logo.png" alt="TeknoRadar" class="brand-logo">
+        <span>TeknoRadar</span>
+      </a>
+      <p>Teknoloji dünyasının yeni nesil radarı. Güncel haberler, açık kaynak projeler ve güvenlik uyarıları tek bir platformda.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="haberler.html">Haberler</a></li>
+        <li><a href="araclar.html">Araçlar</a></li>
+        <li><a href="repos.html">GitHub Repos</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kaynaklar</h4>
+      <ul>
+        <li><a href="guvenlik.html">Güvenlik Uyarıları</a></li>
+        <li><a href="rehberler.html">Rehberler</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kurumsal</h4>
+      <ul>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="#">Gizlilik Politikası</a></li>
+        <li><a href="#">Kullanım Şartları</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 TeknoRadar. Tüm hakları saklıdır.
+  </div>
+</footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>
+
+
+--- /Users/cansinmemis/CansinProjeler/TeknoRadar/pages/hakkinda.html ---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TeknoRadar misyonu, kaynak politikasi ve editoryal yaklasimi.">
+    <title>Hakkında | TeknoRadar</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="TeknoRadar ana sayfa"><img src="../images/logo.png" alt="TeknoRadar" class="brand-logo"><span>TeknoRadar</span></a>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Menüyü aç veya kapat"><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav>
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="haberler.html">Haberler</a>
+        <a href="araclar.html">Araçlar</a>
+        <a href="repos.html">Repos</a>
+        <a href="guvenlik.html">Güvenlik</a>
+        <a href="rehberler.html">Rehberler</a>
+        <a href="hakkinda.html" aria-current="page">Hakkında</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Hakkında</p>
+        <h1>TeknoRadar, teknoloji kalabaligini okunabilir sinyale cevirir.</h1>
+        <p>Projenin amaci; haberleri, açık kaynak hareketlerini, güvenlik uyarılarını ve ücretsiz kaynaklari gelistiriciler için sade bir merkezde toplamaktir.</p>
+      </section>
+
+      <section class="section two-column">
+        <article class="text-panel">
+          <h2>Misyon</h2>
+          <p>TeknoRadar, teknolojiyle ilgilenen herkesin güncel kalmasini kolaylastirir. Her kaynak baglantili, her not kısa, her sayfa dogrudan kullanilabilir olacak sekilde tasarlanir.</p>
+          <p>Bu proje GitHub Pages gibi ücretsiz yayın ortamlarinda calisabilecek kadar hafif, ama veri kaynaklariyla buyuyebilecek kadar esnektir.</p>
+        </article>
+        <article class="text-panel">
+          <h2>Editoryal yaklaşım</h2>
+          <p>Kaynak seffafligi, abartisiz dil ve uygulanabilir bilgi onceliklidir. Haberler yorumdan çok sinyal olarak ele alinir; rehberler uzun makaleler yerine karar destek notlari gibi yazilir.</p>
+          <p>Logo disinda eski gorsel seti kullanilmaz. Yeni arayuz ikon, tipografi, renk ve bilgi mimarisiyle profesyonel bir teknoloji paneli gibi davranir.</p>
+        </article>
+      </section>
+
+      <section class="section band">
+        <div class="principle-grid">
+          <div><strong>Ücretsiz</strong><span>Public API ve açık kaynak odakli.</span></div>
+          <div><strong>Kaynakli</strong><span>Her kritik veri resmi kaynaga gider.</span></div>
+          <div><strong>Hafif</strong><span>Statik mimari, kolay deploy.</span></div>
+          <div><strong>Gelistirilebilir</strong><span>JSON listeler ve moduler JS.</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pro-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <a class="brand" href="../index.html">
+        <img src="../images/logo.png" alt="TeknoRadar" class="brand-logo">
+        <span>TeknoRadar</span>
+      </a>
+      <p>Teknoloji dünyasının yeni nesil radarı. Güncel haberler, açık kaynak projeler ve güvenlik uyarıları tek bir platformda.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="haberler.html">Haberler</a></li>
+        <li><a href="araclar.html">Araçlar</a></li>
+        <li><a href="repos.html">GitHub Repos</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kaynaklar</h4>
+      <ul>
+        <li><a href="guvenlik.html">Güvenlik Uyarıları</a></li>
+        <li><a href="rehberler.html">Rehberler</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kurumsal</h4>
+      <ul>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="#">Gizlilik Politikası</a></li>
+        <li><a href="#">Kullanım Şartları</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 TeknoRadar. Tüm hakları saklıdır.
+  </div>
+</footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>
+
+
+--- /Users/cansinmemis/CansinProjeler/TeknoRadar/pages/rehberler.html ---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TeknoRadar kısa teknoloji rehberleri: güvenlik, frontend, backend, açık kaynak ve kariyer.">
+    <title>Rehberler | TeknoRadar</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="TeknoRadar ana sayfa"><img src="../images/logo.png" alt="TeknoRadar" class="brand-logo"><span>TeknoRadar</span></a>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Menüyü aç veya kapat"><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav>
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="haberler.html">Haberler</a>
+        <a href="araclar.html">Araçlar</a>
+        <a href="repos.html">Repos</a>
+        <a href="guvenlik.html">Güvenlik</a>
+        <a href="rehberler.html" aria-current="page">Rehberler</a>
+        <a href="hakkinda.html">Hakkında</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Rehberler</p>
+        <h1>Kisa, kalici ve uygulanabilir teknoloji notlari.</h1>
+        <p>Uzun teoriler yerine, projeye baslarken ya da karar verirken hizla bakilabilecek pratik rehberler.</p>
+      </section>
+
+      <section class="section">
+        <div class="guide-grid" data-guide-grid></div>
+      </section>
+    </main>
+
+    <footer class="pro-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <a class="brand" href="../index.html">
+        <img src="../images/logo.png" alt="TeknoRadar" class="brand-logo">
+        <span>TeknoRadar</span>
+      </a>
+      <p>Teknoloji dünyasının yeni nesil radarı. Güncel haberler, açık kaynak projeler ve güvenlik uyarıları tek bir platformda.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="haberler.html">Haberler</a></li>
+        <li><a href="araclar.html">Araçlar</a></li>
+        <li><a href="repos.html">GitHub Repos</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kaynaklar</h4>
+      <ul>
+        <li><a href="guvenlik.html">Güvenlik Uyarıları</a></li>
+        <li><a href="rehberler.html">Rehberler</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kurumsal</h4>
+      <ul>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="#">Gizlilik Politikası</a></li>
+        <li><a href="#">Kullanım Şartları</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 TeknoRadar. Tüm hakları saklıdır.
+  </div>
+</footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>
+
+
+--- /Users/cansinmemis/CansinProjeler/TeknoRadar/pages/guvenlik.html ---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CISA KEV, CVE ve kritik güvenlik duyurulari için TeknoRadar güvenlik paneli.">
+    <title>Güvenlik | TeknoRadar</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="TeknoRadar ana sayfa"><img src="../images/logo.png" alt="TeknoRadar" class="brand-logo"><span>TeknoRadar</span></a>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Menüyü aç veya kapat"><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav>
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="haberler.html">Haberler</a>
+        <a href="araclar.html">Araçlar</a>
+        <a href="repos.html">Repos</a>
+        <a href="guvenlik.html" aria-current="page">Güvenlik</a>
+        <a href="rehberler.html">Rehberler</a>
+        <a href="hakkinda.html">Hakkında</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Güvenlik</p>
+        <h1>CVE, KEV ve kritik duyurular için hizli radar.</h1>
+        <p>Yamalanmasi gereken aciklari, etkilenen urunleri ve takip edilmesi gereken aksiyonlari sade bir ekranda izleyin.</p>
+      </section>
+
+      <section class="section two-column">
+        <div>
+          <div class="section-heading compact">
+            <p class="eyebrow">CISA KEV</p>
+            <h2>Aktif istismar sinyalleri</h2>
+          </div>
+          <div class="stack-list" data-kev-list>
+            <p class="loading">KEV katalogu yukleniyor...</p>
+          </div>
+        </div>
+        <aside class="check-panel">
+          <h2>Haftalik kontrol listesi</h2>
+          <label><input type="checkbox"> Kritik paketlerin versiyonlarini kontrol et</label>
+          <label><input type="checkbox"> Public endpoint ve admin panellerini gozden gecir</label>
+          <label><input type="checkbox"> Dependency audit ciktisini ekiple paylas</label>
+          <label><input type="checkbox"> Backup ve rollback senaryosunu test et</label>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="pro-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <a class="brand" href="../index.html">
+        <img src="../images/logo.png" alt="TeknoRadar" class="brand-logo">
+        <span>TeknoRadar</span>
+      </a>
+      <p>Teknoloji dünyasının yeni nesil radarı. Güncel haberler, açık kaynak projeler ve güvenlik uyarıları tek bir platformda.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="haberler.html">Haberler</a></li>
+        <li><a href="araclar.html">Araçlar</a></li>
+        <li><a href="repos.html">GitHub Repos</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kaynaklar</h4>
+      <ul>
+        <li><a href="guvenlik.html">Güvenlik Uyarıları</a></li>
+        <li><a href="rehberler.html">Rehberler</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kurumsal</h4>
+      <ul>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="#">Gizlilik Politikası</a></li>
+        <li><a href="#">Kullanım Şartları</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 TeknoRadar. Tüm hakları saklıdır.
+  </div>
+</footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>
+
+
+--- /Users/cansinmemis/CansinProjeler/TeknoRadar/pages/araclar.html ---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gelistiriciler için ücretsiz araçlar, servisler ve dokumantasyon kaynaklari.">
+    <title>Araçlar | TeknoRadar</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="TeknoRadar ana sayfa"><img src="../images/logo.png" alt="TeknoRadar" class="brand-logo"><span>TeknoRadar</span></a>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Menüyü aç veya kapat"><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav>
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="haberler.html">Haberler</a>
+        <a href="araclar.html" aria-current="page">Araçlar</a>
+        <a href="repos.html">Repos</a>
+        <a href="guvenlik.html">Güvenlik</a>
+        <a href="rehberler.html">Rehberler</a>
+        <a href="hakkinda.html">Hakkında</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Araçlar</p>
+        <h1>Geliştirici için ücretsiz ve pratik arac kutusu.</h1>
+        <p>Dokumantasyon, test, deploy, tasarim, güvenlik ve veri kaynaklarini tek katalogda toplayan secili liste.</p>
+      </section>
+
+      <section class="toolbar" aria-label="Arac filtreleri">
+        <button class="filter-button active" type="button" data-tool-filter="all">Tüm araçlar</button>
+        <button class="filter-button" type="button" data-tool-filter="frontend">Frontend</button>
+        <button class="filter-button" type="button" data-tool-filter="backend">Backend</button>
+        <button class="filter-button" type="button" data-tool-filter="security">Güvenlik</button>
+        <button class="filter-button" type="button" data-tool-filter="data">Veri</button>
+      </section>
+
+      <section class="section">
+        <div class="resource-grid" data-tools-grid></div>
+      </section>
+    </main>
+
+    <footer class="pro-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <a class="brand" href="../index.html">
+        <img src="../images/logo.png" alt="TeknoRadar" class="brand-logo">
+        <span>TeknoRadar</span>
+      </a>
+      <p>Teknoloji dünyasının yeni nesil radarı. Güncel haberler, açık kaynak projeler ve güvenlik uyarıları tek bir platformda.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="haberler.html">Haberler</a></li>
+        <li><a href="araclar.html">Araçlar</a></li>
+        <li><a href="repos.html">GitHub Repos</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kaynaklar</h4>
+      <ul>
+        <li><a href="guvenlik.html">Güvenlik Uyarıları</a></li>
+        <li><a href="rehberler.html">Rehberler</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Kurumsal</h4>
+      <ul>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="#">Gizlilik Politikası</a></li>
+        <li><a href="#">Kullanım Şartları</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 TeknoRadar. Tüm hakları saklıdır.
+  </div>
+</footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>
+
+
